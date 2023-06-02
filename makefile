@@ -6,6 +6,10 @@ venv:
 	pip install --upgrade pip
 	pip install -r requirements.txt
 
+run_server:
+	python3 learn_dj/manage.py runserver
+
+
 clean:
-	rm -rf venv
-	rm -rf learn_dj/learn_dj/__pycache__ learn_dj/main/__pycache__ learn_dj/main/migrations/__pycache__
+	# rm -rf venv
+	rm -rf learn/sql/__pycache__  learn/sql/migrations/__pycache__
