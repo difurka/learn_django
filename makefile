@@ -1,4 +1,6 @@
-.PHONY: venv clean
+.PHONY: venv clean run_server
+
+all: run_server
 
 venv:
 	# python3 -m venv venv
@@ -7,9 +9,9 @@ venv:
 	pip install -r requirements.txt
 
 run_server:
-	python3 learn_dj/manage.py runserver
+	python3 calc/manage.py runserver
 
 
 clean:
 	# rm -rf venv
-	rm -rf learn/sql/__pycache__  learn/sql/migrations/__pycache__
+	rm -rf calc/calc/__pycache__ calc/calc_web/__pycache__  calc/calc_web/migrations/__pycache__
